@@ -1,0 +1,4 @@
+# Settings for PHP FastCGI daemon
+fastcgi_index	index.php;
+include         fastcgi_host;
+include         fastcgi_params;
