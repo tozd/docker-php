@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+echo fastcgi_pass "$FCGI_HOST:$FCGI_PORT;" > /etc/nginx/fastcgi_host
+
+exec chpst -u fcgi-php:fcgi-php /usr/bin/php-cgi -q -b $FCGI_HOST:$FCGI_PORT 2>&1
