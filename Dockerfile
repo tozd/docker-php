@@ -1,4 +1,4 @@
-FROM cloyne/nginx
+FROM tozd/nginx
 
 MAINTAINER Mitar <mitar.docker@tnode.com>
 
