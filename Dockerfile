@@ -11,7 +11,7 @@ ENV PHP_FCGI_MAX_REQUESTS 1000
 
 RUN apt-get update -q -q && \
  apt-get install nullmailer --no-install-recommends --yes --force-yes && \
- apt-get install cron php5-cgi php5-cli php5-pgsql php5-mysql libgd2-xpm adduser --yes --force-yes && \
+ apt-get install cron php5-cgi php5-cli php5-pgsql php5-mysql php5-gd adduser --yes --force-yes && \
  adduser --system --group fcgi-php --home /var/lib/php5
 
 COPY ./etc /etc
