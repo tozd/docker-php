@@ -5,4 +5,4 @@ echo fastcgi_pass "$FCGI_HOST:$FCGI_PORT;" > /etc/nginx/fastcgi_host
 # Is there any other script to run here?
 [ -f /etc/service/php/run.initialization ] && source /etc/service/php/run.initialization
 
-exec chpst -u fcgi-php:fcgi-php /usr/bin/php-cgi -q -b $FCGI_HOST:$FCGI_PORT 2>&1
+exec chpst -u fcgi-php:$(id -Gn fcgi-php | tr ' ' ':') /usr/bin/php-cgi -q -b $FCGI_HOST:$FCGI_PORT 2>&1
