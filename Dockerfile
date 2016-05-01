@@ -5,6 +5,9 @@ ENV FCGI_PORT 9000
 ENV PHP_FCGI_CHILDREN 2
 ENV PHP_FCGI_MAX_REQUESTS 1000
 
+ENV ADMINADDR=
+ENV REMOTES=
+
 # /var/lib/php5 is not owned by fcgi-php, but it is world writable and has a sticky bit.
 
 RUN apt-get update -q -q && \
