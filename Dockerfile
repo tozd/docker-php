@@ -15,6 +15,7 @@ RUN apt-get update -q -q && \
  apt-get install cron php5-cgi php5-cli php5-pgsql php5-mysql php5-gd adduser --yes --force-yes && \
  adduser --system --group fcgi-php --home /var/lib/php5 && \
  mkdir -m 700 /var/spool/nullmailer.orig && \
- mv /var/spool/nullmailer/* /var/spool/nullmailer.orig/
+ mv /var/spool/nullmailer/* /var/spool/nullmailer.orig/ && \
+ for file in /etc/php5/mods-available/*.ini; do php5enmod $(basename -s .ini "$file"); done
 
 COPY ./etc /etc
