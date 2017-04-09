@@ -1,4 +1,4 @@
-FROM tozd/nginx-cron
+FROM tozd/nginx-cron:ubuntu-trusty
 
 ENV FCGI_HOST 127.0.0.1
 ENV FCGI_PORT 9000
@@ -15,6 +15,5 @@ RUN apt-get update -q -q && \
  adduser --system --group fcgi-php --home /var/lib/php && \
  for file in /etc/php/5.6/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done
 
-COPY ./etc/nginx /etc/nginx
-COPY ./etc/service /etc/service
-COPY ./etc/php/5.6 /etc/php/5.6
+COPY ./etc /etc
+COPY ./php /etc/php/5.6
