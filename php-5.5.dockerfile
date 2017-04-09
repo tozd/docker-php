@@ -12,4 +12,6 @@ RUN apt-get update -q -q && \
  adduser --system --group fcgi-php --home /var/lib/php5 && \
  for file in /etc/php5/mods-available/*.ini; do php5enmod $(basename -s .ini "$file"); done
 
-COPY ./etc /etc
+COPY ./etc/nginx /etc/nginx
+COPY ./etc/service /etc/service
+COPY ./etc/php5 /etc/php5
