@@ -1,4 +1,4 @@
-FROM tozd/nginx-cron:ubuntu-trusty
+FROM tozd/nginx-cron:ubuntu-xenial
 
 ENV FCGI_HOST 127.0.0.1
 ENV FCGI_PORT 9000
@@ -11,7 +11,7 @@ RUN apt-get update -q -q && \
  apt-get install software-properties-common language-pack-en-base --yes --force-yes && \
  LC_ALL=en_US.UTF-8 add-apt-repository --yes ppa:ondrej/php && \
  apt-get update -q -q && \
- apt-get install php5.6-cgi php5.6-cli php5.6-pgsql php5.6-mysql php5.6-gd adduser --yes --force-yes && \ 
+ apt-get install php5.6-cgi php5.6-cli php5.6-pgsql php5.6-mysql php5.6-gd adduser --yes --force-yes && \
  adduser --system --group fcgi-php --home /var/lib/php && \
  for file in /etc/php/5.6/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done
 
