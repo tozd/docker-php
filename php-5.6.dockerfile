@@ -13,7 +13,8 @@ RUN apt-get update -q -q && \
  apt-get update -q -q && \
  apt-get install php5.6-cgi php5.6-cli php5.6-pgsql php5.6-mysql php5.6-gd adduser --yes --force-yes && \
  adduser --system --group fcgi-php --home /var/lib/php && \
- for file in /etc/php/5.6/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done
+ for file in /etc/php/5.6/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done && \
+ apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc /etc
 COPY ./php /etc/php/5.6
