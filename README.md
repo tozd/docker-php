@@ -2,6 +2,13 @@
 
 <https://gitlab.com/tozd/docker/php>
 
+Available as:
+
+* [`tozd/php`](https://hub.docker.com/r/tozd/php)
+* [`registry.gitlab.com/tozd/docker/php`](https://gitlab.com/tozd/docker/php/container_registry)
+
+## Description
+
 Image extending [tozd/nginx-cron](https://gitlab.com/tozd/docker/nginx-cron) image to add [PHP](https://secure.php.net/)
 and PHP FCGI daemon.
 

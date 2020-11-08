@@ -1,4 +1,4 @@
-FROM tozd/nginx-cron:ubuntu-bionic
+FROM registry.gitlab.com/tozd/docker/nginx-cron:ubuntu-bionic
 
 ENV FCGI_HOST 127.0.0.1
 ENV FCGI_PORT 9000
