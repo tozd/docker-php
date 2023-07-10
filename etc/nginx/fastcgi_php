@@ -1,4 +1,4 @@
 # Settings for PHP FastCGI daemon
-fastcgi_index	index.php;
-include         fastcgi_host;
+fastcgi_index   index.php;
+fastcgi_pass    127.0.0.1:9000;
 include         fastcgi_params;
