@@ -3,4 +3,4 @@
 # Is there any other script to run here?
 [ -f /etc/service/php/run.initialization ] && source /etc/service/php/run.initialization
 
-exec chpst -u fcgi-php:$(id -Gn fcgi-php | tr ' ' ':') /usr/bin/php-cgi -q -b 127.0.0.1:9000 2>&1
+exec chpst -u fcgi-php:$(id -Gn fcgi-php | tr ' ' ':') /usr/bin/php-cgi -q -b 127.0.0.1:9000
