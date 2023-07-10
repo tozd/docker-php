@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/tozd/docker/nginx-cron:ubuntu-bionic
+FROM registry.gitlab.com/tozd/docker/nginx-cron:ubuntu-jammy
 
 ENV PHP_FCGI_CHILDREN=2
 ENV PHP_FCGI_MAX_REQUESTS=1000
