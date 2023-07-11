@@ -39,3 +39,4 @@ echo "Testing"
 ADDRESS="$(getent hosts docker | awk '{print $1}')"
 echo "$ADDRESS site.test" >> /etc/hosts
 wget -T 30 -q -O - http://site.test | grep -q '<title>Test site</title>'
+echo "Success"
