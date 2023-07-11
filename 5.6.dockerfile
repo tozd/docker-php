@@ -14,5 +14,6 @@ RUN apt-get update -q -q && \
   for file in /etc/php/5.6/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
-COPY ./etc /etc
+COPY ./etc/nginx /etc/nginx
+COPY ./etc/service/php /etc/service/php
 COPY ./php /etc/php/5.6

@@ -11,5 +11,6 @@ RUN apt-get update -q -q && \
   for file in /etc/php5/mods-available/*.ini; do php5enmod $(basename -s .ini "$file"); done && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
-COPY ./etc /etc
+COPY ./etc/nginx /etc/nginx
+COPY ./etc/service/php /etc/service/php
 COPY ./php /etc/php5
