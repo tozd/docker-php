@@ -48,6 +48,7 @@ server {
     access_log /var/log/nginx/default_access.log json;
 
     root /path/to/your/php/code;
+    index index.php;
 
     location ~ /\. {
         return 403;
