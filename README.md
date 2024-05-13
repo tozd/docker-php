@@ -20,6 +20,7 @@ Available as:
 - `7.4`: PHP 7.4
 - `8.0`: PHP 8.0
 - `8.2`: PHP 8.2
+- `8.3`: PHP 8.3
 
 ## Variables
 
