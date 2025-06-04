@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+trap 'echo "ERROR: $BASH_SOURCE:$LINENO $BASH_COMMAND" >&2' ERR
+
 # Is there any other script to run here?
 [ -f /etc/service/php/run.initialization ] && source /etc/service/php/run.initialization
 
