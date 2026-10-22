@@ -13,7 +13,6 @@ Available as:
 
 ## Tags
 
-- `5.5`: PHP 5.5
 - `5.6`: PHP 5.6
 - `7.0`: PHP 7.0
 - `7.1`: PHP 7.1
