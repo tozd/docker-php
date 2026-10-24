@@ -14,6 +14,5 @@ RUN apt-get update -q -q && \
   for file in /etc/php/7.1/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
-COPY ./etc/nginx /etc/nginx
-COPY ./etc/service/php /etc/service/php
+COPY ./etc /etc
 COPY ./php /etc/php/7.1
